@@ -5,7 +5,7 @@
 ##############################
 clear
 voz="Bem vindo, digite um numero de acordo com o que deseja procurar, logo depois pressione enter"
-termux-volume music 7
+termux-volume music 15
 echo -e 'G \033[01;31m o \033[01;33m o \033[01;34m g \033[01;32m l \033[01;31m e \033[00;37;40m'
 sleep 0.1
 echo -e ' S \033[01;31m n \033[01;33m 1 \033[01;34m f \033[01;32m f \033[01;31m 3 \033[00;37;40m r'
