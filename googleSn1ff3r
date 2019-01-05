@@ -1,32 +1,36 @@
 # CODED BY SEPTO
-#https://www.youtube.com/channel/UCG-RIJ6OAt56vfIoLUxn18w
+#http://aminoapps.com/p/26zwalm
 #This tool was made for educational purposes!
 # Nao me responsabilizo por qualquer ato ilegal de sua parte !
 ##############################
 clear
+voz="Bem vindo, digite um numero de acordo com o que deseja procurar, logo depois pressione enter"
+
 echo -e 'G \033[01;31m o \033[01;33m o \033[01;34m g \033[01;32m l \033[01;31m e \033[00;37;40m'
 sleep 0.1
 echo -e ' S \033[01;31m n \033[01;33m 1 \033[01;34m f \033[01;32m f \033[01;31m 3 \033[00;37;40m r'
 sleep 0.1
 echo " "
 echo " [ 1 ] [ Procurar por cameras de seguranca por ai ] "
-	camera='inurl:"ViewerFrame?Mode=" -intitle:"viewerframe" -"By: Septo"'
+	camera='inurl:"ViewerFrame?Mode=" -intitle:"viewerframe"'
 sleep 0.1
 echo " [ 2 ] [ Procurar por Nomes, Cpf's e E-mail's ] "
-	email='filetype:pdf intext:CPF intext:@~.com email -"By: Septo"'
+	email='filetype:pdf intext:CPF intext:@~.com email'
 sleep 0.1
 echo " [ 3 ] [ Procurar por senhas pessoais ] "
-	senha='intext:senha OR intext:senhas filetype:txt -"By: Septo"'
+	senha='intext:senha OR intext:senhas filetype:txt'
 sleep 0.1
 echo " [ 4 ] [ Procurar por listas de E-mails ] "
-	emaillista='filetype:txt "@gmail." -"By: Septo"'
+	emaillista='filetype:txt "@gmail."'
 sleep 0.1
 echo " [ 5 ] [ Procurar por listas de E-mails COM Senha ]"
-	emaillistacomsenha='filetype:txt "@gmail." -"by:Septo" senha password passwd'
+	emaillistacomsenha='filetype:txt "@gmail." senha password passwd'
 sleep 0.1
 echo " [ 6 ] [ Sair ]"
 sleep 0.1
 echo " "
+termux-tts-speak $voz
+
 echo -ne "\033[01;34mS\033[01;31mn\033[01;33mi\033[01;34mf\033[01;32mf\033[01;31mf\033[00;37;40m>> " & read resposta
 
 	if [ "$resposta" -eq 1 ]
@@ -66,6 +70,7 @@ then
 	echo -ne "\033[01;31m [ VOLTE SEMPRE ! ] \033[00;37;40m"
 	exit
 fi
+copiado="pronto, agora basta colar a dork no campo de pesquisa"
+termux-tts-speak $copiado
+termux-open-url http://www.google.com.br
 echo -ne "\033[01;31m [ VOLTE SEMPRE ! ] \033[00;37;"
-echo -ne "\033[01;31m [ FEITO POR : SEPTO ] \033[00;37;"
-echo -ne "\033[01;31m [ #APOLOGY ] \033[00;37;"
